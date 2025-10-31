@@ -1,8 +1,8 @@
-//import { setEntreeChoice } from ".TransientState.js";
+import { setEntreeChoice } from "./TransientState.js";
 
-const handleEntreeChoice = () => {
+const handleEntreeChoice = (changeEvent) => {
   console.log("Change event fired!", changeEvent);
-  if (changeEvent.target.name === "entrees") {
+  if (changeEvent.target.name === "entree") {
     const entreeId = parseInt(changeEvent.target.value);
     setEntreeChoice(entreeId);
   }

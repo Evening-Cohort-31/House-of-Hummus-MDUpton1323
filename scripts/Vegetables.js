@@ -1,4 +1,4 @@
-//import { setVegetableChoice } from "./TransientState.js";
+import { setVegetableChoice } from "./TransientState.js";
 
 const handleVegetableChoice = (changeEvent) => {
   if (changeEvent.target.name === "vegetable") {
