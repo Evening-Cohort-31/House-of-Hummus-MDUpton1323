@@ -1,11 +1,15 @@
 import { Sales } from "./Sales.js";
 import { entreeOptions } from "./Entrees.js";
 import { Veggies } from "./Vegetables.js";
+import { Sides } from "./SideDishes.js";
+import { PurchaseCombo } from "./PuchaseComboOrder.js";
 
 export const FoodTruck = () => {
   const salesHTML = Sales();
   const entreeHTML = entreeOptions();
   const veggiesHTML = Veggies();
+  const sidesHTML = Sides();
+  const purchaseComboHTML = PurchaseCombo();
 
   return `
         <header class="header">
@@ -26,11 +30,13 @@ export const FoodTruck = () => {
 
             <section class="choices_sides options">
                 <h2>Sides</h2>
-                
+                ${sidesHTML}
             </section>
+        </article>
 
         <article>
             <button id="purchase">Purchase Combo</button>
+            ${purchaseComboHTML}
         </article>
 
         <article class="customerOrders">
