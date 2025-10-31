@@ -1,16 +1,18 @@
+//Import the following functions below
 import { Sales } from "./Sales.js";
 import { entreeOptions } from "./Entrees.js";
 import { Veggies } from "./Vegetables.js";
 import { Sides } from "./SideDishes.js";
 import { PurchaseCombo } from "./PuchaseComboOrder.js";
-
-export const FoodTruck = () => {
-  const salesHTML = Sales();
-  const entreeHTML = entreeOptions();
-  const veggiesHTML = Veggies();
-  const sidesHTML = Sides();
+//Export an async function called FoodTruck that, that uses Await functions and stores the returned HTML for the following functions below
+export const FoodTruck = async () => {
+  const salesHTML = await Sales();
+  const entreeHTML = await entreeOptions();
+  const veggiesHTML = await Veggies();
+  const sidesHTML = await Sides();
+  //Call the PurchaseCombo function and store the returned HTML in purchaseComboHTML
   const purchaseComboHTML = PurchaseCombo();
-
+  //Return a template string that contains, A header, an article with 3 sections, an article for the purchase button, and an article for the customers orders while all are using string Interpolation.
   return `
         <header class="header">
             <img src="./images/hummus.png" class="logo" />
@@ -35,7 +37,7 @@ export const FoodTruck = () => {
         </article>
 
         <article>
-            <button id="purchase">Purchase Combo</button>
+            <button id="purchaseCombo-button">Purchase Combo</button>
             ${purchaseComboHTML}
         </article>
 

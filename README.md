@@ -56,10 +56,10 @@ sequenceDiagram
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Should transient state be represented in a database diagram? Why, or why not?
-   > Your answer here
+   > No, because transient state is temporary memory not permanent data.
 2. In the **FoodTruck** module, you are **await**ing the invocataion of all of the component functions _(e.g. sales, veggie options, etc.)_. Why must you use the `await` keyword there? Explain what happens if you remove it.
-   > Your answer here
+   > Without the await you will get a promise object, meaning that you are not fetching for anything from the database leading to the HTML string not being added.
 3. When the user is making choices by selecting radio buttons, explain how that data is retained so that the **Purchase Combo** button works correctly.
-   > Your answer here
+   > When a user clicks on the buttons the data is then taken and stored as temporary memory or stored in the transient state, once the purchase combo button is pressed from there it is then stored into the database making it permanent. After we will invoke or call not sure on the verbage here but with sales.js we will then pull that data and show all orders.
 4. You used the `map()` array method in the self assessment _(at least, you should have since it is a learning objective)_. Explain why that function is helpful as a replacement for a `for..of` loop.
-   > Your answer here
+   > It would be to messy with a for..of loop because you would have to write so much more code. The map() method helps with time and adding new arrays as you go. More readable you don't have to manually add each string.
