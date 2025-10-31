@@ -1,10 +1,9 @@
-import { FoodTruck } from "./FoodTruck.js"
+import { FoodTruck } from "./FoodTruck.js";
 
-const mainContainer = document.querySelector("#container")
+const mainContainer = document.querySelector("#container");
 
 const renderAllHTML = () => {
-    mainContainer.innerHTML = FoodTruck()
-}
+  mainContainer.innerHTML = FoodTruck();
+};
 
-renderAllHTML()
-
+renderAllHTML();
